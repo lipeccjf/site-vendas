@@ -3,6 +3,8 @@
 use App\Http\Controllers\PaginaInicialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AdminController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,6 +17,10 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/', [PaginaInicialController::class, 'index'])->name('paginainicial');
 Route::get('/paginainicial', [PaginaInicialController::class, 'index'])->name('paginainicial');
+
+Route::get('/admin/estatisticas', [AdminController::class, 'estatisticasProdutos'])
+    ->name('admin.estatisticas')
+    ->middleware('auth');
 
 
 

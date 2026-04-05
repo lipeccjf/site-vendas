@@ -1,0 +1,18 @@
+/* admin-produtos.css */
+.container-grafico {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.cabecalho-card {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.titulo-card {
+    font-size: 18px;
+    color: var(--texto-escuro);
+    font-weight: 700;
+}
