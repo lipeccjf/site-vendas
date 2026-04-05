@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaginaInicialController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -8,7 +9,15 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::get('/dashboard', fn() => 'dashboard :: ' . auth()->id())->middleware('auth')->name('dashboard');
+//Route::get('/dashboard', fn() => 'dashboard :: ' . auth()->id())->middleware('auth')->name('dashboard');
 
+Route::get('/', [PaginaInicialController::class, 'index'])->name('paginainicial');
+Route::get('/paginainicial', [PaginaInicialController::class, 'index'])->name('paginainicial');
+
+
+
+
+
+    

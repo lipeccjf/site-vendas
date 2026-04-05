@@ -59,17 +59,17 @@ return [
     |
     */
 
-    'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
-        ],
-
+   'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Usuario::class,  // ← APONTE PARA ESTA MODEL
+    ],
+],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ],
+
 
     /*
     |--------------------------------------------------------------------------

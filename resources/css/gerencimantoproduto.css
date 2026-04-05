@@ -1,0 +1,23 @@
+.foto-perfil-tabela {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid var(--cinza-borda);
+}
+
+textarea.input-simples {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 5px;
+    resize: none;
+}
+
+.cabecalho-card-acoes .botao-principal {
+    padding: 8px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

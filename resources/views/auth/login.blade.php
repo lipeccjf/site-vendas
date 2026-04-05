@@ -12,22 +12,22 @@
 
     <div class="login-container">
         
-        {{-- Cabeçalho do Login --}}
+       
         <div class="login-header">
             <h1>Bem-vindo</h1>
             <p>Faça login para acessar sua conta</p>
         </div>
 
-        {{-- Exibição de Mensagens (Erro/Sucesso) --}}
+   
         @if ($message = session('messagem'))
             <div class="message">
                 {{ $message }}
             </div>
         @endif
 
-        {{-- Formulário --}}
+     
         <form action="/login" method="POST">
-            @csrf
+     
 
             <div class="form-group">
                 <label for="email">E-mail</label>
@@ -39,7 +39,7 @@
                 <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
             </div>
 
-            <button type="submit">Entrar</button>
+            <button type="button" onclick="window.location.href='{{ route('paginainicial') }}'">Entrar</button>
         </form>
 
       
