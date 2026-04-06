@@ -425,6 +425,7 @@ function limparCamposEndereco() {
         document.getElementById(id).value = '';
     });
 }
+    @vite['resources/js/gerenciamentousuarios.js']
 </script>
 </body>
 </html>

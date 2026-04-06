@@ -9,6 +9,8 @@ use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CategoriaController;
+
 
 
 
@@ -93,3 +95,15 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/usuarios', [UsuarioController::class, 'index'])->name('usuarios.index');
 });
 
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/admins', [UsuarioController::class, 'admins'])->name('admins.index');
+    Route::post('/admins', [UsuarioController::class, 'storeAdmin'])->name('admins.store');
+    Route::get('/admins/{id}', [UsuarioController::class, 'showAdmin'])->name('admins.show');
+    Route::put('/admins/{id}', [UsuarioController::class, 'updateAdmin'])->name('admins.update');
+    Route::delete('/admins/{id}', [UsuarioController::class, 'destroyAdmin'])->name('admins.destroy');
+});
+
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('categorias', CategoriaController::class);
+});

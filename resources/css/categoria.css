@@ -1,0 +1,150 @@
+/* Layout Principal */
+.pagina-usuarios {
+    display: flex;         /* Coloca Sidebar e Conteúdo lado a lado */
+    min-height: 100vh;
+    width: 100%;
+}
+
+#sidebar-container {
+    width: 260px;          /* Largura fixa da sidebar */
+    flex-shrink: 0;        /* Impede a sidebar de encolher */
+}
+
+.conteiner-dir {
+    flex: 1;               /* Ocupa todo o espaço restante à direita */
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f7fa;
+}
+
+/* Lógica de Centralização do Conteúdo */
+.conteudo-pagina {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centraliza o card horizontalmente */
+    padding: 40px 20px;
+}
+
+.cabecalho-pagina {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Card de Conteúdo */
+.card-lista {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;      /* Largura máxima para não esticar demais e parecer centralizado */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Detalhes Visuais */
+.acoes-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.btn-adicionar {
+    background: #2c5282;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tabela-padrao {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-padrao th, .tabela-padrao td {
+    padding: 15px 25px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.centralizado { text-align: center; }
+
+.btn-acao {
+    border: none;
+    background: none;
+    color: #a0aec0;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* --- Estilos de Modal --- */
+.modal-camada {
+    display: none; /* Inicia oculto */
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-caixa {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+    animation: modalEntrada 0.3s ease-out;
+}
+
+@keyframes modalEntrada {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-cabecalho {
+    padding: 20px;
+    background: #2c5282;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-perigo { background: #c53030; }
+
+.fechar-x { cursor: pointer; font-size: 24px; opacity: 0.8; }
+.fechar-x:hover { opacity: 1; }
+
+.modal-corpo { padding: 25px; }
+
+.input-padrao {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.modal-rodape {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* --- Botões do Modal --- */
+.btn-confirmar { background: #2c5282; color: #fff; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn-cancelar { background: #edf2f7; color: #4a5568; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn-perigo { background: #c53030; color: #fff; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+
+.icone-aviso { font-size: 50px; color: #e53e3e; margin-bottom: 15px; }
