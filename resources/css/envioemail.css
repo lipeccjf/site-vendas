@@ -1,0 +1,29 @@
+/* envio-email.css */
+
+.area-texto {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--texto-escuro);
+    resize: vertical;
+    outline: none;
+    background-color: #fcfcfc;
+}
+
+.area-texto:focus {
+    border-color: var(--azul-primario);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.05);
+}
+
+.select-simples {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+}
