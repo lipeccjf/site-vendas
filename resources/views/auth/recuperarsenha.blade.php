@@ -14,6 +14,8 @@
     @vite(['resources/css/global.css', 'resources/css/recuperarsenha.css'])
 </head>
 <body class="fundo-autenticacao">
+
+<?php include 'sidebar.blade.php'; ?>
     <div class="container-central">
         <section class="card-login">
             <header class="cabecalho-auth">

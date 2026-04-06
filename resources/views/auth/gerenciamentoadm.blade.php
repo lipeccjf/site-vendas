@@ -15,6 +15,7 @@
     @vite(['resources/css/gerenciamentoadm.css', 'resources/css/modal.css', 'resources/css/global.css'])
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
     <div class="pagina-admins">
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-Commerce</div>

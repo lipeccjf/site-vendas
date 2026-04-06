@@ -12,6 +12,8 @@
     </style>
 </head>
 <body>
+
+<?php include 'sidebar.blade.php'; ?>
     <h1>Relatório de Compras - {{ now()->format('d/m/Y') }}</h1>
     <p>Usuário: {{ auth()->user()->name ?? 'Usuário' }}</p>
     

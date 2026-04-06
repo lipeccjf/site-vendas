@@ -18,7 +18,7 @@
     ])
 </head>
 <body>
-    {{-- Script para injetar dados do banco no gráfico Chart.js --}}
+   <?php include 'sidebar.blade.php'; ?>
     <script>
         window.graficoLabels = @json($labels ?? []);
         window.graficoDados = @json($valores ?? []);

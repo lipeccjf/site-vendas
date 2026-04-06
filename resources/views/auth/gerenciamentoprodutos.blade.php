@@ -20,6 +20,8 @@
         window.graficoDados = @json($valores ?? []);
         window.is_admin = {{ Auth::user()->is_admin ? 'true' : 'false' }};
     </script>
+
+    <?php include 'sidebar.blade.php'; ?>
     
 
     <div class="pagina-admins">

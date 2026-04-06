@@ -13,6 +13,7 @@
     @vite(['resources/css/paginainicial.css', 'resources/css/sidebar.css'])
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
     <div class="pagina">
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-Commerce</div>

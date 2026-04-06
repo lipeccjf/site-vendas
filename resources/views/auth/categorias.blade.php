@@ -71,6 +71,7 @@ $categorias = $db->query($query)->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="categorias.css">
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
 
     <div class="pagina-usuarios">
         <div id="sidebar-container"></div>

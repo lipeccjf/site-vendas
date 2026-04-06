@@ -18,6 +18,7 @@
     ])
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
     <div class="pagina-admins">
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-Commerce</div>

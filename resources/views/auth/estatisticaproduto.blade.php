@@ -15,11 +15,12 @@
         'resources/css/minhasvendas.css',
         'resources/js/minhasvendas.js',
         'resources/js/estatisticaproduto.js'
-        
+
 
     ])
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
     <script>
         window.graficoLabels = @json($labels ?? []);
         window.graficoDados = @json($valores ?? []);

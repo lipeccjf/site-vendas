@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 </head>
 <body>
-
+<?php include 'sidebar.blade.php'; ?>
     <div class="pagina-container">
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-SHOP</div>

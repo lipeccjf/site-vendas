@@ -9,8 +9,9 @@
     @vite(['resources/css/global.css'])
 </head>
 <body>
+    <?php include 'sidebar.blade.php'; ?>
     <div class="pagina-compra">
-        <!-- Sidebar igual ao HTML original -->
+ 
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-Commerce</div>
             <ul class="menu-lateral">

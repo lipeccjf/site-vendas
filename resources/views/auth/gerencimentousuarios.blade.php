@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
 </head>
 <body>
+
+<?php include 'sidebar.blade.php'; ?>
     <div class="pagina-usuarios">
         <aside class="conteiner-esq">
             <div class="logo-sistema">E-Commerce</div>

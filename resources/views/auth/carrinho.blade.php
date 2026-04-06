@@ -54,7 +54,7 @@ $totalGeral = 0;
     <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
-
+<?php include 'sidebar.blade.php'; ?>
     <div class="pagina-usuarios">
         <div id="sidebar-container"></div>
 
