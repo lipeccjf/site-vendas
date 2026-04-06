@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 
+$query = "SELECT c.id, c.nome,
           (SELECT COUNT(*) FROM produto p WHERE p.categoria_id = c.id) as total_produtos 
           FROM categoria c 
           ORDER BY c.id DESC";
@@ -60,7 +61,7 @@ $categorias = $db->query($query)->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Categorias - E-Commerce 2026</title>
+    <title>Gerenciamento de Categorias </title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

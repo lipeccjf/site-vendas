@@ -1,0 +1,98 @@
+/* Layout Principal */
+.pagina-usuarios {
+    display: flex; /* Sidebar ao lado do conteúdo */
+    min-height: 100vh;
+    width: 100%;
+}
+
+#sidebar-container {
+    width: 260px;
+    flex-shrink: 0; /* Impede a sidebar de encolher */
+}
+
+.conteiner-dir {
+    flex: 1; /* Ocupa todo o espaço restante */
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f5f9;
+}
+
+/* Mágica da Centralização */
+.conteudo-pagina {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    padding: 30px;
+}
+
+.card-carrinho {
+    background: #fff;
+    width: 100%;
+    max-width: 800px; /* Evita que o carrinho fique largo demais em telas grandes */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.card-header-azul {
+    background: #2c5282;
+    color: #fff;
+    padding: 15px 25px;
+    font-weight: 600;
+}
+
+.tabela-carrinho {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-carrinho th {
+    text-align: left;
+    padding: 15px 25px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 13px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabela-carrinho td {
+    padding: 15px 25px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+.produto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-carrinho {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    background: #eee;
+    object-fit: cover;
+}
+
+.card-footer-carrinho {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-checkout {
+    background: #2c5282;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-checkout:hover { background: #2a4365; transform: scale(1.02); }
