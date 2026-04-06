@@ -1,0 +1,28 @@
+/* historico.css */
+.cabecalho-card-acoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-produto-tabela {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid var(--cinza-borda);
+}
+
+.valor-compra {
+    font-weight: 700;
+    color: var(--azul-primario);
+}
+
+@media (max-width: 768px) {
+    .cabecalho-card-acoes {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}

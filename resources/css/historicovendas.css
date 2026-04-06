@@ -1,0 +1,25 @@
+
+.grupo-botoes-relatorio {
+    display: flex;
+    gap: 10px;
+}
+
+.foto-venda-tabela {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid var(--cinza-borda);
+}
+
+.valor-venda {
+    color: #2f855a; /* Verde para indicar lucro/venda */
+    font-weight: 700;
+}
+
+.card-lista {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cinza-borda);
+}
