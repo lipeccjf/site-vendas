@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Endereco;
 
 class Usuario extends Authenticatable
 {
@@ -15,6 +17,8 @@ class Usuario extends Authenticatable
      * Tabela correta do banco SQLite
      */
     protected $table = 'usuario';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
 
     /**
      * Campos do SEU BANCO (do dump)
@@ -32,6 +36,23 @@ class Usuario extends Authenticatable
         'isadmin',     // ← Campo admin do seu banco
     ];
 
+      protected $casts = [
+        'datanascimento' => 'date',
+        'saldo' => 'decimal:2',
+        'datacriacao' => 'date',
+        'isadmin' => 'boolean',
+    ];
+
+
+     public function endereco()
+    {
+        return $this->hasOne(Endereco::class, 'usuarioid');
+    }
+
+     public function setSenhaAttribute($value)
+    {
+        $this->attributes['senha'] = Hash::make($value);
+    }n
     /**
      * Campos ocultos
      */
@@ -39,6 +60,8 @@ class Usuario extends Authenticatable
         'senha',       // ← CORRIGIDO: nome do banco
         'remember_token',
     ];
+
+
 
     /**
      * Casts corretos

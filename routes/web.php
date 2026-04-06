@@ -5,8 +5,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\VendasController;
-use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\ProdutosController; 
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\SalesController;
+use App\Http\Controllers\UsuarioController;
+
 
 
 
@@ -80,4 +83,13 @@ Route::middleware('auth')->group(function () {
 });
 
 
-    
+Route::middleware('auth')->group(function () {
+    Route::get('/grafico-vendas', [SalesController::class, 'graficoVendas'])
+        ->name('grafico.vendas');
+});
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('usuarios', UsuarioController::class)->only(['index', 'store', 'show', 'update', 'destroy']);
+    Route::get('/usuarios', [UsuarioController::class, 'index'])->name('usuarios.index');
+});
+
